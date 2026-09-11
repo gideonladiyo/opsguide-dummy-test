@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebRPA Dummy Test</title>
+  <link rel="stylesheet" href="/ratsk147/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">WebRPA dummy test</p>
+    <h1>Test fixtures</h1>
+    <p class="intro">Pilih project dummy berdasarkan endpoint atau case yang ingin diuji.</p>
+
+    <section class="endpoint-grid" aria-label="Dummy projects">
+      <a class="endpoint-card success" href="/ratsk147/">
+        <span class="endpoint-code">RATSK-147</span>
+        <h2>Applicant CSV</h2>
+        <p>Fixture untuk menguji <code>extract_csv</code>, optional step, zero rows, dan nama file Jepang.</p>
+        <span class="endpoint-link">Buka project <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="endpoint-card" href="/dummy-form/">
+        <span class="endpoint-code">DUMMY-FORM</span>
+        <h2>Inquiry form</h2>
+        <p>Dummy contact form yang sudah tersedia untuk pengujian submit dan integrasi endpoint.</p>
+        <span class="endpoint-link">Buka project <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+
+    <div class="button-row">
+      <a class="button-link" href="/ratsk147/">Mulai RATSK-147 <span aria-hidden="true">↗</span></a>
+      <a class="button-link secondary" href="/dummy-form/">Buka dummy form <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <aside class="test-note">
+      <strong>Base URL:</strong> semua case RATSK-147 dimulai dari <code>/ratsk147/</code>.
+    </aside>
+  </main>
+</body>
+</html>

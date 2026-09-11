@@ -19,8 +19,8 @@ h1 { max-width: 640px; margin: 14px 0 12px; font-size: clamp(38px, 7vw, 72px); l
 .intro { max-width: 620px; color: #9da9bc; font-size: 18px; }
 code { padding: 2px 6px; border-radius: 5px; color: #d9e2f2; background: #202a3d; font: 0.9em ui-monospace, SFMono-Regular, Consolas, monospace; }
 .endpoint-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 42px; }
-.endpoint-card { display: block; min-height: 220px; padding: 26px; color: inherit; background: rgba(28, 36, 52, .9); border: 1px solid #354158; border-radius: 18px; text-decoration: none; transition: transform .18s ease, border-color .18s ease; }
-.endpoint-card:hover { transform: translateY(-3px); border-color: #91a6c7; }
+.endpoint-card { display: block; min-height: 220px; padding: 26px; color: inherit; background: rgba(28, 36, 52, .9); border: 1px solid #354158; border-radius: 18px; text-decoration: none; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
+.endpoint-card:hover, .endpoint-card:focus-visible { transform: translateY(-3px); border-color: #91a6c7; box-shadow: 0 14px 34px rgba(0, 0, 0, .22); outline: none; }
 .endpoint-card h2 { margin: 20px 0 8px; font-size: 24px; letter-spacing: -.03em; }
 .endpoint-card p { min-height: 50px; margin: 0; color: #9da9bc; }
 .endpoint-code { color: #b7c5da; font: 700 11px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
@@ -30,6 +30,11 @@ code { padding: 2px 6px; border-radius: 5px; color: #d9e2f2; background: #202a3d
 .success .endpoint-code { color: #72d7b4; }
 .endpoint-link { display: inline-block; margin-top: 24px; color: #f1f5fb; font-weight: 700; }
 .test-note { margin-top: 20px; padding: 18px 20px; color: #b6c1d2; background: #171e2b; border-left: 3px solid #72d7b4; border-radius: 8px; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+.button-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 17px; color: #10141d; background: #72d7b4; border: 1px solid #72d7b4; border-radius: 999px; font-weight: 800; text-decoration: none; transition: background .18s ease, transform .18s ease; }
+.button-link:hover, .button-link:focus-visible { color: #10141d; background: #a5f1d8; text-decoration: none; transform: translateY(-2px); outline: none; }
+.button-link.secondary { color: #e8edf5; background: transparent; border-color: #53627c; }
+.button-link.secondary:hover, .button-link.secondary:focus-visible { color: #fff; background: #26334b; }
 
 @media (max-width: 680px) {
   .shell { padding: 44px 0; }
