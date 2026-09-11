@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RATSK-147 Dummy Endpoints</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <p class="eyebrow">WebRPA fixture · RATSK-147</p>
+    <h1>Applicant CSV test endpoints</h1>
+    <p class="intro">Gunakan endpoint di bawah sebagai target website dummy untuk menguji <code>extract_csv</code>.</p>
+
+    <section class="endpoint-grid" aria-label="Test endpoints">
+      <a class="endpoint-card danger" href="no-applicants/">
+        <span class="endpoint-code">SITE_NO_APPLICANTS</span>
+        <h2>Tanpa applicant</h2>
+        <p>Tidak ada elemen download CSV di DOM. Cocok untuk menguji optional step.</p>
+        <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="endpoint-card success" href="csv-zero-rows/">
+        <span class="endpoint-code">SITE_CSV_ZERO_ROWS</span>
+        <h2>CSV header-only</h2>
+        <p>Elemen download tersedia, tetapi file hanya berisi header dan 0 data row.</p>
+        <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="endpoint-card" href="with-applicants/">
+        <span class="endpoint-code">SITE_WITH_APPLICANTS</span>
+        <h2>CSV dengan data</h2>
+        <p>Elemen download tersedia dan file berisi beberapa applicant untuk happy path.</p>
+        <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
+      </a>
+      <a class="endpoint-card" href="japanese-filename/">
+        <span class="endpoint-code">CSV_WITH_JA_FILENAME</span>
+        <h2>Nama file Jepang</h2>
+        <p>CSV header-only dengan nama file Jepang dan spasi untuk boundary test.</p>
+        <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+
+    <aside class="test-note">
+      <strong>Selector yang disarankan:</strong> <code>.csv-download</code><br>
+      Untuk test optional OFF/ON, gunakan endpoint <code>no-applicants/</code>. Untuk membedakan skip dari CSV kosong, gunakan <code>csv-zero-rows/</code>.
+    </aside>
+  </main>
+</body>
+</html>

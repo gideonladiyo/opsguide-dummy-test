@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry | ひきだすにほんご Activate Your Japanese! Content Library | The Japan Foundation</title>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-root">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="site-brand">
+          <a href="#" class="brand-link">
+            <span class="brand-jp">ひきだすにほんご</span>
+            <span class="brand-en">Activate Your Japanese!</span>
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link active">TOP</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Watch Video <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Xuan Tackles Japan! / スアン日本へ行く！</a></li>
+                <li><a href="#">ONOMATOPOEIA -Share Feelings- / 気持ちが伝わるオノマトペ</a></li>
+                <li><a href="#">Welcome to My Japan! / 津々浦々 日本のセンパイ</a></li>
+                <li><a href="#">My List / お気に入り</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Related Content <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Let's Use ひきだすにほんご！ ~Examples of use~</a></li>
+                <li><a href="#">List of downloadable materials</a></li>
+                <li><a href="#">Related articles</a></li>
+                <li><a href="#">Seminar and event video archive</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="lang-switch">
+          <span class="lang-label"><i class="fa-solid fa-globe"></i> Language</span>
+          <a href="#" class="lang-btn">Japanese</a>
+          <a href="#" class="lang-btn active">English</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="#">Top</a></li>
+          <li class="active">Inquiry</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="inquiry-header">
+          <h1 class="page-title">お問い合わせ</h1>
+          <h2 class="page-subtitle">Inquiry Form</h2>
+          <div class="inquiry-notice-box">
+            <p>
+              If you have any questions about the website, please fill out the form and press confirm.
+              Frequently asked questions can be checked <a href="#" class="link-inline">here</a>.
+              Please note that we cannot answer questions regarding Japanese language.
+              Please also note that it may take a while for us to reply.
+            </p>
+            <p class="resource-link-p">
+              <a href="https://www.jpf.go.jp/e/project/japanese/education/resource/index.html" target="_blank" rel="noopener noreferrer" class="external-resource-link">
+                Find out more about JF's Japanese-Language resources here <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <!-- Step Indicator -->
+          <div class="step-indicator">
+            <div class="step-item active" id="step-indicator-1">
+              <span class="step-num">1</span>
+              <span class="step-label">Input</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" id="step-indicator-2">
+              <span class="step-num">2</span>
+              <span class="step-label">Confirm</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-item" id="step-indicator-3">
+              <span class="step-num">3</span>
+              <span class="step-label">Complete</span>
+            </div>
+          </div>
+
+          <!-- Alert Messages -->
+          <div id="alert-box" class="alert-box hidden"></div>
+
+          <!-- STEP 1: INPUT FORM -->
+          <div id="form-step-1" class="form-step-content active">
+            <form id="contact-form" novalidate>
+              <!-- Name Column -->
+              <div class="form-group" id="group-name">
+                <label for="input-name" class="form-label">
+                  Name <span class="badge-required">required</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="input-name" 
+                  name="name" 
+                  class="form-control" 
+                  maxlength="300" 
+                  placeholder="Enter your full name" 
+                  required
+                >
+                <div class="error-feedback" id="error-name">Please enter your name.</div>
+              </div>
+
+              <!-- Email Column -->
+              <div class="form-group" id="group-email">
+                <label for="input-email" class="form-label">
+                  E-mail <span class="badge-required">required</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="input-email" 
+                  name="email" 
+                  class="form-control" 
+                  placeholder="example@domain.com" 
+                  required
+                >
+                <div class="error-feedback" id="error-email">Please enter a valid email address.</div>
+              </div>
+
+              <!-- Description Column -->
+              <div class="form-group" id="group-description">
+                <label for="input-description" class="form-label">
+                  Description <span class="badge-required">required</span>
+                </label>
+                <textarea 
+                  id="input-description" 
+                  name="description" 
+                  class="form-control" 
+                  rows="7" 
+                  maxlength="5000" 
+                  placeholder="Type your inquiry details here..." 
+                  required
+                ></textarea>
+                <div class="error-feedback" id="error-description">Please enter your inquiry description.</div>
+              </div>
+
+              <div class="encryption-note">
+                <i class="fa-solid fa-lock"></i> Your input data will be encrypted during transmission.
+              </div>
+
+              <div class="button-group">
+                <button type="button" id="btn-confirm" class="btn btn-primary btn-confirm">
+                  Confirm <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- STEP 2: CONFIRMATION PREVIEW -->
+          <div id="form-step-2" class="form-step-content hidden">
+            <div class="confirmation-intro">
+              <h3>Confirm your input details</h3>
+              <p>Please check if the information below is correct before submitting.</p>
+            </div>
+
+            <div class="preview-card">
+              <div class="preview-row">
+                <div class="preview-label">Name <span class="badge-required">required</span></div>
+                <div class="preview-value" id="preview-name"></div>
+              </div>
+              <div class="preview-row">
+                <div class="preview-label">E-mail <span class="badge-required">required</span></div>
+                <div class="preview-value" id="preview-email"></div>
+              </div>
+              <div class="preview-row">
+                <div class="preview-label">Description <span class="badge-required">required</span></div>
+                <div class="preview-value" id="preview-description"></div>
+              </div>
+            </div>
+
+            <div class="encryption-note">
+              <i class="fa-solid fa-lock"></i> Your input data will be encrypted during transmission.
+            </div>
+
+            <div class="button-group dual-btn">
+              <button type="button" id="btn-back" class="btn btn-secondary btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+              </button>
+              <button type="button" id="btn-submit" class="btn btn-submit">
+                <span class="btn-spinner hidden" id="btn-spinner"><i class="fa-solid fa-circle-notch fa-spin"></i></span>
+                <span class="btn-text" id="btn-text"><i class="fa-solid fa-lock"></i> Submit</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 3: SUCCESS COMPLETE -->
+          <div id="form-step-3" class="form-step-content hidden">
+            <div class="success-card">
+              <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2>Inquiry Sent Successfully!</h2>
+              <p>Thank you for reaching out to us. Your inquiry has been logged and sent to our team spreadsheet.</p>
+              <p class="sub-text">We will review your inquiry and get back to you if necessary.</p>
+              <div class="button-group center-btn">
+                <button type="button" id="btn-reset" class="btn btn-primary">
+                  Submit Another Inquiry
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Site map</a></li>
+            <li><a href="#">Site policy</a></li>
+          </ul>
+        </div>
+        <p class="copyright">© The Japan Foundation Japanese-Language Institute, Urawa, All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
