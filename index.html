@@ -3,38 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WebRPA Dummy Test</title>
-  <link rel="stylesheet" href="/ratsk147/styles.css">
+  <meta name="description" content="Daftar halaman dummy untuk pengujian WebRPA.">
+  <title>Dummy test pages</title>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <main class="shell">
-    <p class="eyebrow">WebRPA dummy test</p>
-    <h1>Test fixtures</h1>
-    <p class="intro">Pilih project dummy berdasarkan endpoint atau case yang ingin diuji.</p>
+  <a class="skip-link" href="#content">Lewati ke konten</a>
+  <main id="content">
+    <header>
+      <p class="label">WebRPA dummy test</p>
+      <h1>Dummy test pages</h1>
+      <p class="intro">Pilih halaman yang ingin digunakan untuk pengujian.</p>
+    </header>
 
-    <section class="endpoint-grid" aria-label="Dummy projects">
-      <a class="endpoint-card success" href="/ratsk147/">
-        <span class="endpoint-code">RATSK-147</span>
-        <h2>Applicant CSV</h2>
-        <p>Fixture untuk menguji <code>extract_csv</code>, optional step, zero rows, dan nama file Jepang.</p>
-        <span class="endpoint-link">Buka project <span aria-hidden="true">→</span></span>
+    <section aria-labelledby="project-heading">
+      <h2 id="project-heading">Projects</h2>
+      <a class="project" href="/ratsk147/">
+        <span>
+          <strong>Applicant CSV</strong>
+          <small>RATSK-147 · Pengujian CSV, optional step, dan zero rows.</small>
+        </span>
+        <span class="open">Buka <span aria-hidden="true">→</span></span>
       </a>
-      <a class="endpoint-card" href="/dummy-form/">
-        <span class="endpoint-code">DUMMY-FORM</span>
-        <h2>100 dummy forms</h2>
-        <p>Sepuluh jenis form, masing-masing memiliki sepuluh duplikasi untuk pengujian otomasi.</p>
-        <span class="endpoint-link">Buka katalog form <span aria-hidden="true">→</span></span>
+      <a class="project" href="/dummy-form/">
+        <span>
+          <strong>100 dummy forms</strong>
+          <small>DUMMY-FORM · Sepuluh jenis form dengan sepuluh duplikasi.</small>
+        </span>
+        <span class="open">Buka <span aria-hidden="true">→</span></span>
       </a>
     </section>
-
-    <div class="button-row">
-      <a class="button-link" href="/ratsk147/">Mulai RATSK-147 <span aria-hidden="true">↗</span></a>
-      <a class="button-link secondary" href="/dummy-form/">Buka 100 form <span aria-hidden="true">↗</span></a>
-    </div>
-
-    <aside class="test-note">
-      <strong>Base URL:</strong> semua case RATSK-147 dimulai dari <code>/ratsk147/</code>.
-    </aside>
   </main>
 </body>
 </html>
