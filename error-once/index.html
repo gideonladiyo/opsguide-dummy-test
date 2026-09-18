@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Action page · WebRPA dummy</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./script.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">WEBRPA / ERROR-ONCE</p>
+    <header>
+      <h1>Action page</h1>
+      <p>Use the controls below as automation steps, then move to the error simulation page.</p>
+    </header>
+    <section class="workspace" aria-label="WebRPA actions">
+      <div class="panel-head"><span>AVAILABLE ACTIONS</span><span>PAGE 01</span></div>
+      <div class="form-body">
+        <div class="field-block">
+          <label for="action-name"><span>ENTER TEXT</span> Process name</label>
+          <input id="action-name" type="text" autocomplete="off" placeholder="Enter any name">
+        </div>
+        <fieldset class="field-block">
+          <legend>Priority</legend>
+          <label class="choice"><input id="priority-normal" type="radio" name="priority" value="normal"> Normal</label>
+          <label class="choice"><input id="priority-high" type="radio" name="priority" value="high"> High</label>
+        </fieldset>
+        <label class="choice field-block"><input id="action-confirm" type="checkbox"> Confirm action</label>
+        <div class="actions">
+          <button id="action-button" type="button">Run regular action <span aria-hidden="true">→</span></button>
+          <a id="go-to-error-simulation" class="button-link" href="/error-once/error-simulation/">Go to error simulation <span aria-hidden="true">↗</span></a>
+        </div>
+        <p id="action-status" role="status">The regular action has not run yet.</p>
+      </div>
+    </section>
+    <p class="footnote">After detecting the error, your automation can return here and repeat the required steps. <button id="reset-simulation" class="text-button" type="button">Reset one-time error</button></p>
+  </main>
+</body>
+</html>

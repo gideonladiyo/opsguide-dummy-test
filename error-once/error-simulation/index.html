@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error simulation · WebRPA dummy</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../script.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">WEBRPA / ERROR-SIMULATION</p>
+    <header>
+      <h1>Error simulation</h1>
+      <p>This page has the same action controls as the previous page. The final button triggers an error only on its first click in this tab session.</p>
+    </header>
+    <section id="simulation-page" class="workspace" aria-label="WebRPA actions and error simulation">
+      <div class="panel-head"><span>AVAILABLE ACTIONS</span><span>PAGE 02</span></div>
+      <div class="form-body">
+        <div class="field-block">
+          <label for="action-name"><span>ENTER TEXT</span> Process name</label>
+          <input id="action-name" type="text" autocomplete="off" placeholder="Enter any name">
+        </div>
+        <fieldset class="field-block">
+          <legend>Priority</legend>
+          <label class="choice"><input id="priority-normal" type="radio" name="priority" value="normal"> Normal</label>
+          <label class="choice"><input id="priority-high" type="radio" name="priority" value="high"> High</label>
+        </fieldset>
+        <label class="choice field-block"><input id="action-confirm" type="checkbox"> Confirm action</label>
+        <div class="actions">
+          <button id="action-button" type="button">Run regular action <span aria-hidden="true">→</span></button>
+          <button id="trigger-error" class="danger-button" type="button">Run error-prone process <span aria-hidden="true">→</span></button>
+        </div>
+        <p id="action-status" role="status">The regular action has not run yet.</p>
+        <p id="simulation-success" role="status" hidden>Process completed successfully. The one-time error has already occurred in this session.</p>
+      </div>
+    </section>
+    <section id="error-page" class="workspace error-page" role="alert" hidden>
+      <div class="panel-head"><span>ERROR PAGE</span><span>SIMULATED FAILURE</span></div>
+      <div class="error-body">
+        <span class="error-code">ERR_SIMULATED_ONCE</span>
+        <h2>The process failed to run.</h2>
+        <p>The action page is hidden. Use your error detection feature to return to an earlier step, then open this simulation page again. The next click on the same button will succeed.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

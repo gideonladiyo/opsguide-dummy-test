@@ -2,6 +2,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node dummy-form/api/submit.test.js"
+    "test": "node dummy-form/api/submit.test.js && node error-once/script.test.js"
   }
 }
