@@ -1,6 +1,8 @@
-const failureKey = 'webrpa-error-once-failed';
+const failureKeyPrefix = 'webrpa-error-once-failed-';
+const triggerNames = ['a', 'b'];
 
-export function triggerOnce(storage) {
+export function triggerOnce(storage, triggerName) {
+  const failureKey = `${failureKeyPrefix}${triggerName}`;
   if (storage.getItem(failureKey) === '1') return 'success';
   storage.setItem(failureKey, '1');
   return 'error';
@@ -8,7 +10,7 @@ export function triggerOnce(storage) {
 
 if (typeof document !== 'undefined') {
   if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
-    sessionStorage.removeItem(failureKey);
+    triggerNames.forEach((name) => sessionStorage.removeItem(`${failureKeyPrefix}${name}`));
   }
 
   document.getElementById('action-button').addEventListener('click', () => {
@@ -16,16 +18,24 @@ if (typeof document !== 'undefined') {
   });
 
   document.getElementById('reset-simulation')?.addEventListener('click', () => {
-    sessionStorage.removeItem(failureKey);
-    document.getElementById('action-status').textContent = 'Simulation reset. The next click will trigger an error again.';
+    triggerNames.forEach((name) => sessionStorage.removeItem(`${failureKeyPrefix}${name}`));
+    document.getElementById('action-status').textContent = 'Simulation reset. Both buttons will trigger an error again.';
   });
 
-  document.getElementById('trigger-error')?.addEventListener('click', () => {
-    if (triggerOnce(sessionStorage) === 'error') {
-      document.getElementById('simulation-page').hidden = true;
-      document.getElementById('error-page').hidden = false;
-    } else {
-      document.getElementById('simulation-success').hidden = false;
-    }
-  });
+  function registerTrigger(id, name) {
+    document.getElementById(id)?.addEventListener('click', () => {
+      if (triggerOnce(sessionStorage, name) === 'error') {
+        document.getElementById('error-source').textContent = `TRIGGER ${name.toUpperCase()}`;
+        document.getElementById('simulation-page').hidden = true;
+        document.getElementById('error-page').hidden = false;
+      } else {
+        const status = document.getElementById('simulation-success');
+        status.textContent = `Trigger ${name.toUpperCase()} completed successfully. Its one-time error has already occurred.`;
+        status.hidden = false;
+      }
+    });
+  }
+
+  registerTrigger('trigger-error', 'a');
+  registerTrigger('trigger-error-b', 'b');
 }

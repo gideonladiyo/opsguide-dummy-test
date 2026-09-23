@@ -8,7 +8,10 @@ const storage = {
   removeItem: (key) => values.delete(key),
 };
 
-assert.equal(triggerOnce(storage), 'error');
-assert.equal(triggerOnce(storage), 'success');
-storage.removeItem('webrpa-error-once-failed');
-assert.equal(triggerOnce(storage), 'error');
+assert.equal(triggerOnce(storage, 'a'), 'error');
+assert.equal(triggerOnce(storage, 'a'), 'success');
+assert.equal(triggerOnce(storage, 'b'), 'error');
+assert.equal(triggerOnce(storage, 'b'), 'success');
+storage.removeItem('webrpa-error-once-failed-a');
+assert.equal(triggerOnce(storage, 'a'), 'error');
+assert.equal(triggerOnce(storage, 'b'), 'success');
