@@ -151,6 +151,56 @@ code {
   font-size: 0.9rem;
 }
 
+#download-status {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  color: #52525b;
+  font-size: 0.95rem;
+}
+
+#download-status:empty {
+  margin: 0;
+}
+
+.variants {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e4e4e7;
+}
+
+.variants h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.variants p {
+  max-width: 38rem;
+  margin: 0.5rem 0 0;
+  color: #52525b;
+  font-size: 0.95rem;
+}
+
+.variants dl {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+}
+
+.variants dt {
+  margin-top: 0.9rem;
+}
+
+.variants dd {
+  margin: 0.25rem 0 0;
+  color: #71717a;
+  font-size: 0.9rem;
+}
+
+.variants a {
+  color: #18181b;
+  font-weight: 600;
+}
+
 @media (max-width: 560px) {
   .shell {
     padding-top: 3rem;
