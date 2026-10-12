@@ -6,8 +6,9 @@
   <meta name="description" content="Dummy invoice untuk pengujian ekstraksi dan download file PDF.">
   <title>Dummy Invoice</title>
   <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
 </head>
-<body>
+<body data-hub="../">
   <main class="shell">
     <a class="back-link" href="../">← Semua project</a>
     <p class="eyebrow">DUMMY_INVOICE</p>
@@ -18,6 +19,7 @@
       yang berbeda.
     </p>
     <a class="pdf-download" id="download-invoice" href="../invoice-dummy.pdf" download="invoice-dummy.pdf">Download invoice PDF <span aria-hidden="true">↓</span></a>
+    <p id="download-status" role="status"></p>
     <aside class="test-note"><strong>Expected fixture:</strong> selector match = 1. File PDF valid dengan 1 halaman berisi invoice dummy.</aside>
   </main>
 </body>
