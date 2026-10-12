@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dummy invoice untuk pengujian ekstraksi dan download file PDF.">
+  <title>Dummy Invoice</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <main class="shell">
+    <a class="back-link" href="../">← Semua project</a>
+    <p class="eyebrow">DUMMY_INVOICE</p>
+    <h1>Dummy invoice</h1>
+    <p class="intro">
+      Halaman fixture berisi invoice dummy untuk pengujian otomasi. Klik tombol di bawah untuk
+      mengunduh file PDF invoice. File yang diunduh selalu sama di semua halaman, hanya URL halaman
+      yang berbeda.
+    </p>
+    <a class="pdf-download" id="download-invoice" href="../invoice-dummy.pdf" download="invoice-dummy.pdf">Download invoice PDF <span aria-hidden="true">↓</span></a>
+    <aside class="test-note"><strong>Expected fixture:</strong> selector match = 1. File PDF valid dengan 1 halaman berisi invoice dummy.</aside>
+  </main>
+</body>
+</html>
