@@ -201,6 +201,115 @@ code {
   font-weight: 600;
 }
 
+/* Selector alternatif untuk varian ?selector=v2 */
+.pdf-download-alt {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.pdf-download-alt:hover {
+  background: #3f3f46;
+}
+
+.pdf-download-alt:focus-visible,
+#cookie-accept:focus-visible,
+#pin-submit:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 4px;
+}
+
+/* Banner cookie menutupi area tombol download */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #d4d4d8;
+  background: #18181b;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 0.35rem;
+  color: #18181b;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Gerbang PIN mengunci tombol download */
+.pin-gate {
+  max-width: 24rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.35rem;
+  background: #fafafa;
+}
+
+.pin-gate label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #52525b;
+  font-size: 0.9rem;
+}
+
+.pin-gate label span {
+  display: block;
+  color: #71717a;
+  font: 600 0.7rem ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pin-gate input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+.pin-gate button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.3rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#pin-error {
+  margin: 0.6rem 0 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 @media (max-width: 560px) {
   .shell {
     padding-top: 3rem;
