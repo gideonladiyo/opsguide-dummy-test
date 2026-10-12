@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1265 >>
+stream
+BT /F1 14 Tf 50 760 Td (DUMMY INVOICE \(EXPIRED\)) Tj ET
+BT /F1 10 Tf 50 746 Td (=========================================) Tj ET
+BT /F1 10 Tf 50 732 Td () Tj ET
+BT /F1 12 Tf 50 718 Td (Status:        EXPIRED / KEDALUWARSA) Tj ET
+BT /F1 10 Tf 50 704 Td () Tj ET
+BT /F1 10 Tf 50 690 Td (Invoice No:   INV-2025-0001) Tj ET
+BT /F1 10 Tf 50 676 Td (Invoice Date: 2025-01-15) Tj ET
+BT /F1 10 Tf 50 662 Td (Expired Date: 2025-02-15) Tj ET
+BT /F1 10 Tf 50 648 Td () Tj ET
+BT /F1 10 Tf 50 634 Td (Billed To:) Tj ET
+BT /F1 10 Tf 50 620 Td (Dummy Customer) Tj ET
+BT /F1 10 Tf 50 606 Td (Jl. Contoh Dummy No. 1) Tj ET
+BT /F1 10 Tf 50 592 Td (Jakarta, Indonesia) Tj ET
+BT /F1 10 Tf 50 578 Td () Tj ET
+BT /F1 10 Tf 50 564 Td (Item            Qty   Unit Price       Amount) Tj ET
+BT /F1 10 Tf 50 550 Td (------------------------------------------------) Tj ET
+BT /F1 10 Tf 50 536 Td (Consulting        1    1,000,000.00     1,000,000.00) Tj ET
+BT /F1 10 Tf 50 522 Td (------------------------------------------------) Tj ET
+BT /F1 12 Tf 50 508 Td (TOTAL                                 1,000,000.00) Tj ET
+BT /F1 10 Tf 50 494 Td () Tj ET
+BT /F1 10 Tf 50 480 Td (Invoice ini sudah kedaluwarsa dan tidak berlaku.) Tj ET
+BT /F1 9 Tf 50 466 Td (Fixture untuk pengujian WebRPA.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001558 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1626
+%%EOF

@@ -9,6 +9,10 @@
   <script src="script.js" defer></script>
 </head>
 <body data-hub="./">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Pemberitahuan cookie" hidden>
+    <p>Situs ini memakai cookie untuk keperluan pengujian.</p>
+    <button id="cookie-accept" type="button">Terima</button>
+  </div>
   <main class="shell">
     <a class="back-link" href="../">← Semua project</a>
     <p class="eyebrow">DUMMY_INVOICE</p>
@@ -21,45 +25,45 @@
     <a class="pdf-download" id="download-invoice" href="invoice-dummy.pdf" download="invoice-dummy.pdf">Download invoice PDF <span aria-hidden="true">↓</span></a>
     <p id="download-status" role="status"></p>
 
+    <div id="pin-gate" class="pin-gate" hidden>
+      <label for="pin-input"><span>PIN</span> Masukkan PIN untuk membuka download</label>
+      <input id="pin-input" type="password" inputmode="numeric" autocomplete="off">
+      <button id="pin-submit" type="button">Buka</button>
+      <p id="pin-error" role="alert" hidden>PIN salah</p>
+    </div>
+
     <section class="endpoint-grid" aria-label="Invoice endpoints">
       <a class="endpoint-card" href="receipt/">
         <span class="endpoint-code">SITE_RECEIPT</span>
         <h2>Receipt</h2>
-        <p>Invoice dummy dengan URL <code>/dummy-invoices/receipt/</code>.</p>
+        <p>Invoice dummy dengan URL <code>/dummy-inv/receipt/</code>.</p>
         <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
       </a>
       <a class="endpoint-card" href="download/">
         <span class="endpoint-code">SITE_DOWNLOAD</span>
         <h2>Download</h2>
-        <p>Invoice dummy dengan URL <code>/dummy-invoices/download/</code>.</p>
+        <p>Invoice dummy dengan URL <code>/dummy-inv/download/</code>.</p>
         <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
       </a>
       <a class="endpoint-card" href="billing/">
         <span class="endpoint-code">SITE_BILLING</span>
         <h2>Billing</h2>
-        <p>Invoice dummy dengan URL <code>/dummy-invoices/billing/</code>.</p>
+        <p>Invoice dummy dengan URL <code>/dummy-inv/billing/</code>.</p>
         <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
       </a>
       <a class="endpoint-card" href="invoice/">
         <span class="endpoint-code">SITE_INVOICE</span>
         <h2>Invoice</h2>
-        <p>Invoice dummy dengan URL <code>/dummy-invoices/invoice/</code>.</p>
+        <p>Invoice dummy dengan URL <code>/dummy-inv/invoice/</code>.</p>
         <span class="endpoint-link">Buka endpoint <span aria-hidden="true">→</span></span>
       </a>
     </section>
 
-    <section class="variants" aria-label="Varian download">
+    <section class="variants" id="param-docs" aria-label="Varian download">
       <h2>Varian</h2>
       <p>Tambahkan query parameter untuk memicu perilaku berbeda.</p>
-      <dl>
-        <dt><code>?delay=N</code></dt>
-        <dd>Tombol disembunyikan, countdown N detik, lalu download otomatis. N dibatasi 1–60.</dd>
-        <dt><code>?redirect=X</code></dt>
-        <dd>Saat tombol diklik, PDF tetap terunduh lalu halaman redirect ke <code>/dummy-invoices/X/</code>. X salah satu dari <code>receipt</code>, <code>download</code>, <code>billing</code>, <code>invoice</code>.</dd>
-        <dt><code>?delay=N&amp;redirect=X</code></dt>
-        <dd>Kombinasi keduanya: countdown N detik, download otomatis, lalu redirect.</dd>
-      </dl>
-      <p>Contoh: <a href="billing/?delay=3">billing dengan delay 3 detik</a> · <a href="invoice/?redirect=receipt">invoice redirect ke receipt</a></p>
+      <dl id="param-docs-list"></dl>
+      <p id="param-docs-note"></p>
     </section>
 
     <aside class="test-note"><strong>Expected fixture:</strong> selector match = 1. File PDF valid dengan 1 halaman berisi invoice dummy.</aside>
