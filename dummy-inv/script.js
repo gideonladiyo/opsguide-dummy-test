@@ -188,6 +188,8 @@ function init() {
       startCountdown(anchor, status, variant.delay, function () {
         anchor.hidden = false;
       });
+    } else {
+      anchor.hidden = false;
     }
   };
 
