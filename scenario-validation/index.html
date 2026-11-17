@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Form dummy untuk pengujian generate dan validasi skenario (Good/Bad Generation).">
+  <title>Scenario validation forms</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header"><span class="brand">WebRPA dummy · SCENARIO-VALIDATION</span></header>
+  <main>
+    <h1>Scenario validation forms</h1>
+    <p class="lead">Delapan halaman, masing-masing mewakili satu perusahaan baru. Dipakai untuk menguji generate skenario dan Validate Scenario (TLBUG-34). Import <a href="./companies.csv">companies.csv</a> ke OpsGuide.</p>
+    <section class="catalog table-wrap">
+      <table>
+        <thead><tr><th>Halaman</th><th>Perusahaan</th><th>Form</th><th>Hasil validasi yang diharapkan</th></tr></thead>
+        <tbody>
+          <tr><td><a href="./good-01/">good-01</a></td><td>検証テスト商事株式会社</td><td>5 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./good-02/">good-02</a></td><td>検証テスト工業株式会社</td><td>6 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./good-03/">good-03</a></td><td>検証テストソリューションズ株式会社</td><td>5 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./good-04/">good-04</a></td><td>検証テスト物流株式会社</td><td>6 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./good-05/">good-05</a></td><td>検証テストシステム株式会社</td><td>5 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./good-06/">good-06</a></td><td>検証テスト建設株式会社</td><td>6 field + 送信する</td><td>Good Generation</td></tr>
+          <tr><td><a href="./bad-01/">bad-01</a></td><td>検証テスト通信株式会社</td><td>1 field + 送信する</td><td>Bad Generation (kurang dari 5 step)</td></tr>
+          <tr><td><a href="./bad-02/">bad-02</a></td><td>検証テスト食品株式会社</td><td>1 field + 送信する</td><td>Bad Generation (kurang dari 5 step)</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

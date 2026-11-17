@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>資料請求 | 検証テスト物流株式会社</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../form.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><span class="brand">検証テスト物流株式会社</span></header>
+  <main>
+    <h1>資料請求</h1>
+    <p class="lead">サービス資料のダウンロード・郵送をご希望の方はこちら。</p>
+    <form id="contact-form" data-page="good-04" novalidate>
+      <div class="field">
+        <label for="f-company">会社名 <span class="req">必須</span></label>
+        <input id="f-company" type="text" name="company" required>
+      </div>
+      <div class="field">
+        <label for="f-name">お名前 <span class="req">必須</span></label>
+        <input id="f-name" type="text" name="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス <span class="req">必須</span></label>
+        <input id="f-email" type="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">電話番号 <span class="req">必須</span></label>
+        <input id="f-phone" type="tel" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="f-material">ご希望の資料 <span class="req">必須</span></label>
+        <select id="f-material" name="material" required><option value="">選択してください</option><option value="会社案内">会社案内</option><option value="サービス概要">サービス概要</option><option value="料金表">料金表</option></select>
+      </div>
+      <div class="field">
+        <label for="f-note">備考</label>
+        <textarea id="f-note" name="note" rows="5"></textarea>
+      </div>
+      <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      <button id="submit-button" type="submit">送信する</button>
+    </form>
+    <section id="thanks" class="thanks" hidden>
+      <h2>送信が完了しました</h2>
+      <p>お問い合わせありがとうございました。（テスト用ページのため、データは保存されません）</p>
+    </section>
+  </main>
+  <footer class="site-footer">© 検証テスト物流株式会社（テスト用ダミーサイト）</footer>
+</body>
+</html>

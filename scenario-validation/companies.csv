@@ -1,0 +1,9 @@
+name,main_company_url,inquiry_url
+検証テスト商事株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-01/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-01/
+検証テスト工業株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-02/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-02/
+検証テストソリューションズ株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-03/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-03/
+検証テスト物流株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-04/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-04/
+検証テストシステム株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-05/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-05/
+検証テスト建設株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/good-06/,https://opsguide-dummy-test.vercel.app/scenario-validation/good-06/
+検証テスト通信株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/bad-01/,https://opsguide-dummy-test.vercel.app/scenario-validation/bad-01/
+検証テスト食品株式会社,https://opsguide-dummy-test.vercel.app/scenario-validation/bad-02/,https://opsguide-dummy-test.vercel.app/scenario-validation/bad-02/

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>協業・パートナーのご相談 | 検証テストシステム株式会社</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../form.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><span class="brand">検証テストシステム株式会社</span></header>
+  <main>
+    <h1>協業・パートナーのご相談</h1>
+    <p class="lead">業務提携や販売代理店に関するご相談を受け付けています。</p>
+    <form id="contact-form" data-page="good-05" novalidate>
+      <div class="field">
+        <label for="f-company">会社名 <span class="req">必須</span></label>
+        <input id="f-company" type="text" name="company" required>
+      </div>
+      <div class="field">
+        <label for="f-website">会社ウェブサイト</label>
+        <input id="f-website" type="url" name="website">
+      </div>
+      <div class="field">
+        <label for="f-name">ご担当者名 <span class="req">必須</span></label>
+        <input id="f-name" type="text" name="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス <span class="req">必須</span></label>
+        <input id="f-email" type="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="f-proposal">ご提案内容 <span class="req">必須</span></label>
+        <textarea id="f-proposal" name="proposal" rows="5" required></textarea>
+      </div>
+      <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      <button id="submit-button" type="submit">送信する</button>
+    </form>
+    <section id="thanks" class="thanks" hidden>
+      <h2>送信が完了しました</h2>
+      <p>お問い合わせありがとうございました。（テスト用ページのため、データは保存されません）</p>
+    </section>
+  </main>
+  <footer class="site-footer">© 検証テストシステム株式会社（テスト用ダミーサイト）</footer>
+</body>
+</html>

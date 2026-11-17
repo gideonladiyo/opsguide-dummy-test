@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ひとことご意見 | 検証テスト食品株式会社</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../form.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><span class="brand">検証テスト食品株式会社</span></header>
+  <main>
+    <h1>ひとことご意見</h1>
+    <p class="lead">ご意見を一言でお寄せください。</p>
+    <form id="contact-form" data-page="bad-02" novalidate>
+      <div class="field">
+        <label for="f-opinion">ご意見 <span class="req">必須</span></label>
+        <textarea id="f-opinion" name="opinion" rows="5" required></textarea>
+      </div>
+      <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      <button id="submit-button" type="submit">送信する</button>
+    </form>
+    <section id="thanks" class="thanks" hidden>
+      <h2>送信が完了しました</h2>
+      <p>お問い合わせありがとうございました。（テスト用ページのため、データは保存されません）</p>
+    </section>
+  </main>
+  <footer class="site-footer">© 検証テスト食品株式会社（テスト用ダミーサイト）</footer>
+</body>
+</html>
