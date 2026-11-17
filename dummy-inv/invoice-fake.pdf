@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Not a PDF</title></head>
+<body>
+  <h1>Bukan PDF</h1>
+  <p>File ini berekstensi .pdf tetapi isinya HTML.</p>
+  <p>Fixture untuk pengujian deteksi tipe file di WebRPA.</p>
+</body>
+</html>

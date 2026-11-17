@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dummy invoice untuk pengujian ekstraksi dan download file PDF.">
+  <title>Dummy Invoice</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module" src="../script.js"></script>
+</head>
+<body data-hub="../">
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Pemberitahuan cookie" hidden>
+    <p>Situs ini memakai cookie untuk keperluan pengujian.</p>
+    <button id="cookie-accept" type="button">Terima</button>
+  </div>
+  <main class="shell">
+    <a class="back-link" href="../">← Semua project</a>
+    <p class="eyebrow">DUMMY_INVOICE</p>
+    <h1>Dummy invoice</h1>
+    <p class="intro">
+      Halaman fixture berisi invoice dummy untuk pengujian otomasi. Klik tombol di bawah untuk
+      mengunduh file PDF invoice. File yang diunduh selalu sama di semua halaman, hanya URL halaman
+      yang berbeda.
+    </p>
+    <a class="pdf-download" id="download-invoice" href="../invoice-dummy.pdf" download="invoice-dummy.pdf">Download invoice PDF <span aria-hidden="true">↓</span></a>
+    <p id="download-status" role="status"></p>
+
+    <div id="pin-gate" class="pin-gate" hidden>
+      <label for="pin-input"><span>PIN</span> Masukkan PIN untuk membuka download</label>
+      <input id="pin-input" type="password" inputmode="numeric" autocomplete="off">
+      <button id="pin-submit" type="button">Buka</button>
+      <p id="pin-error" role="alert" hidden>PIN salah</p>
+    </div>
+
+    <section class="variants" id="param-docs" aria-label="Varian download">
+      <h2>Varian</h2>
+      <p>Tambahkan query parameter untuk memicu perilaku berbeda.</p>
+      <dl id="param-docs-list"></dl>
+      <p id="param-docs-note"></p>
+    </section>
+
+    <aside class="test-note"><strong>Expected fixture:</strong> selector match = 1. File PDF valid dengan 1 halaman berisi invoice dummy.</aside>
+  </main>
+</body>
+</html>

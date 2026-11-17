@@ -1,0 +1,379 @@
+:root {
+  color: #18181b;
+  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #fff;
+}
+
+.shell {
+  width: min(100% - 2rem, 720px);
+  margin: 0 auto;
+  padding: 6rem 0 8rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: #52525b;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #71717a;
+  font: 600 0.75rem ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 42rem;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.intro {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: #52525b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  color: #27272a;
+  background: #f4f4f5;
+  font: 0.9em ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.endpoint-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.endpoint-card {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.4rem;
+  color: inherit;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.endpoint-card:hover {
+  border-color: #a1a1aa;
+  background: #fafafa;
+}
+
+.endpoint-card:active {
+  transform: translateY(1px);
+}
+
+.endpoint-card:focus-visible,
+.endpoint-link:focus-visible,
+.pdf-download:focus-visible,
+.back-link:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 4px;
+}
+
+.endpoint-card h2 {
+  margin: 0.8rem 0 0.4rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.endpoint-card p {
+  max-width: 36rem;
+  margin: 0;
+  color: #71717a;
+  font-size: 0.9rem;
+}
+
+.endpoint-code {
+  color: #71717a;
+  font: 600 0.7rem ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.06em;
+}
+
+.endpoint-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: #18181b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdf-download {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.pdf-download:hover {
+  background: #3f3f46;
+}
+
+.test-note {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.35rem;
+  color: #52525b;
+  background: #fafafa;
+  font-size: 0.9rem;
+}
+
+#download-status {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  color: #52525b;
+  font-size: 0.95rem;
+}
+
+#download-status:empty {
+  margin: 0;
+}
+
+.variants {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e4e4e7;
+}
+
+.variants h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.variants p {
+  max-width: 38rem;
+  margin: 0.5rem 0 0;
+  color: #52525b;
+  font-size: 0.95rem;
+}
+
+.variants dl {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+}
+
+.variants dt {
+  margin-top: 0.9rem;
+}
+
+.variants dd {
+  margin: 0.25rem 0 0;
+  color: #71717a;
+  font-size: 0.9rem;
+}
+
+.variants a {
+  color: #18181b;
+  font-weight: 600;
+}
+
+/* Selector alternatif untuk varian ?selector=v2 */
+.pdf-download-alt {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+
+.pdf-download-alt:hover {
+  background: #3f3f46;
+}
+
+.pdf-download-alt:focus-visible,
+#cookie-accept:focus-visible,
+#pin-submit:focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 4px;
+}
+
+/* Banner cookie menutupi area tombol download */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid #d4d4d8;
+  background: #18181b;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.cookie-banner p {
+  margin: 0;
+}
+
+.cookie-banner button {
+  padding: 0.6rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 0.35rem;
+  color: #18181b;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Gerbang PIN mengunci tombol download */
+.pin-gate {
+  max-width: 24rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.35rem;
+  background: #fafafa;
+}
+
+.pin-gate label {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: #52525b;
+  font-size: 0.9rem;
+}
+
+.pin-gate label span {
+  display: block;
+  color: #71717a;
+  font: 600 0.7rem ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pin-gate input {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+.pin-gate button {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.3rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#pin-error {
+  margin: 0.6rem 0 0;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Halaman decoy (social, login, privacy, terms) — URL rejected untuk test sanitize */
+.decoy-post {
+  max-width: 38rem;
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid #e4e4e7;
+  border-radius: 0.35rem;
+  background: #fafafa;
+}
+
+.decoy-post .post-meta {
+  margin: 0 0 0.5rem;
+  color: #71717a;
+  font-size: 0.85rem;
+}
+
+.decoy-post p {
+  margin: 0;
+  color: #27272a;
+  font-size: 0.95rem;
+}
+
+.decoy-form {
+  max-width: 24rem;
+  margin-top: 2rem;
+}
+
+.decoy-form label {
+  display: block;
+  margin-top: 1rem;
+  color: #52525b;
+  font-size: 0.9rem;
+}
+
+.decoy-form input {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+.decoy-form button {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #18181b;
+  border-radius: 0.35rem;
+  color: #fff;
+  background: #18181b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .shell {
+    padding-top: 3rem;
+  }
+
+  .back-link {
+    margin-bottom: 3rem;
+  }
+}

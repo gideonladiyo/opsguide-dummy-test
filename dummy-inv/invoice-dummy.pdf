@@ -1,0 +1,55 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1488 >>
+stream
+BT /F1 14 Tf 50 760 Td (DUMMY INVOICE) Tj ET
+BT /F1 10 Tf 50 746 Td (=========================================) Tj ET
+BT /F1 10 Tf 50 732 Td () Tj ET
+BT /F1 10 Tf 50 718 Td (Invoice No:   INV-2026-0001) Tj ET
+BT /F1 10 Tf 50 704 Td (Invoice Date: 2026-10-12) Tj ET
+BT /F1 10 Tf 50 690 Td (Due Date:     2026-11-11) Tj ET
+BT /F1 10 Tf 50 676 Td () Tj ET
+BT /F1 10 Tf 50 662 Td (Billed To:) Tj ET
+BT /F1 10 Tf 50 648 Td (Dummy Customer) Tj ET
+BT /F1 10 Tf 50 634 Td (Jl. Contoh Dummy No. 1) Tj ET
+BT /F1 10 Tf 50 620 Td (Jakarta, Indonesia) Tj ET
+BT /F1 10 Tf 50 606 Td () Tj ET
+BT /F1 10 Tf 50 592 Td (Item            Qty   Unit Price       Amount) Tj ET
+BT /F1 10 Tf 50 578 Td (------------------------------------------------) Tj ET
+BT /F1 10 Tf 50 564 Td (Consulting        1    1,500,000.00     1,500,000.00) Tj ET
+BT /F1 10 Tf 50 550 Td (Hosting Plan      1      250,000.00       250,000.00) Tj ET
+BT /F1 10 Tf 50 536 Td (Support Hours     2      100,000.00       200,000.00) Tj ET
+BT /F1 10 Tf 50 522 Td (------------------------------------------------) Tj ET
+BT /F1 10 Tf 50 508 Td (Subtotal                              1,950,000.00) Tj ET
+BT /F1 10 Tf 50 494 Td (Tax \(11%\)                               214,500.00) Tj ET
+BT /F1 12 Tf 50 480 Td (TOTAL                                 2,164,500.00) Tj ET
+BT /F1 10 Tf 50 466 Td () Tj ET
+BT /F1 9 Tf 50 452 Td (This is a dummy invoice generated for WebRPA testing.) Tj ET
+BT /F1 9 Tf 50 438 Td (All data above is fictional.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001781 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1849
+%%EOF
