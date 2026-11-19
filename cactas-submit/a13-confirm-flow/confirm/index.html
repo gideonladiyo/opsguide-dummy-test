@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>入力内容の確認 | CACTAS検証A13株式会社</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <script src="../../form.js" defer></script>
+</head>
+<!-- QA (a13 confirm): 戻る (type=submit) ada lebih dulu di DOM; tombol kirim berteks 「　この内容で送信する　」. -->
+<body data-root="../../" data-page="a13-confirm-flow">
+  <header class="site-header"><span class="brand">CACTAS検証A13株式会社</span></header>
+  <main>
+    <h1>入力内容の確認</h1>
+    <p class="lead">以下の内容でよろしければ「この内容で送信する」を押してください。</p>
+    <form id="confirm-form" class="contact-form" novalidate>
+      <table>
+        <tbody>
+          <tr><th>会社名</th><td>（入力済み）</td></tr>
+          <tr><th>お名前</th><td>（入力済み）</td></tr>
+          <tr><th>メールアドレス</th><td>（入力済み）</td></tr>
+          <tr><th>お問い合わせ内容</th><td>（入力済み）</td></tr>
+        </tbody>
+      </table>
+      <p id="form-status" class="status" role="status" aria-live="polite"></p>
+      <button id="back-button" type="submit" name="back" class="secondary" data-action="back" data-href="../">戻る</button>
+      <button id="submit-button" type="submit" name="send">　この内容で送信する　</button>
+    </form>
+  </main>
+  <footer class="site-footer">© CACTAS検証A13株式会社（テスト用ダミーサイト）</footer>
+</body>
+</html>

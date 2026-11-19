@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>サイト内検索</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../form.js" defer></script>
+</head>
+<!-- QA: halaman ini berarti tombol 検索 di header yang terklik, BUKAN tombol kirim form kontak. -->
+<body data-root="../" data-page="search">
+  <header class="site-header"><span class="brand">サイト内検索</span></header>
+  <main>
+    <h1>検索結果</h1>
+    <section class="thanks">
+      <p>該当するページは見つかりませんでした（0件）。</p>
+      <p id="verdict" class="verdict"></p>
+      <table>
+        <tbody>
+          <tr><th>ページ</th><td data-param="page"></td></tr>
+          <tr><th>クリックされた要素</th><td data-param="btn"></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

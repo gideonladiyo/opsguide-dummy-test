@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Form dummy untuk tiket kegagalan kirim CACTAS (TLTSK-721 / TLTSK-722).">
+  <title>CACTAS submit forms</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header"><span class="brand">WebRPA dummy · CACTAS-SUBMIT</span></header>
+  <main>
+    <h1>CACTAS submit failure forms</h1>
+    <p class="lead">30 halaman untuk tombol 送信/確認, click timeout, dan proxy fixed IP. Import <a href="./companies.csv">companies.csv</a> (dan <a href="./tunnel-targets.csv">tunnel-targets.csv</a> untuk uji tunnel) ke OpsGuide. Hasil yang diharapkan ada di README.md folder ini.</p>
+    <section class="catalog table-wrap">
+      <table>
+        <thead><tr><th>Halaman</th><th>Grup</th><th>Perusahaan</th><th>Kondisi</th></tr></thead>
+        <tbody>
+          <tr><td><a href="./a00-drift/">a00-drift</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A00株式会社</td><td>Label &amp; tipe tombol dari query ?label=&amp;type= (button|input|notype|anchor)</td></tr>
+          <tr><td><a href="./a01-baseline/">a01-baseline</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A01株式会社</td><td>送信する (kontrol)</td></tr>
+          <tr><td><a href="./a02-short/">a02-short</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A02株式会社</td><td>送信</td></tr>
+          <tr><td><a href="./a03-long/">a03-long</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A03株式会社</td><td>この内容で送信する</td></tr>
+          <tr><td><a href="./a04-zenkaku-space/">a04-zenkaku-space</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A04株式会社</td><td>U+3000 di kiri-kanan</td></tr>
+          <tr><td><a href="./a05-arrow/">a05-arrow</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A05株式会社</td><td>送信する &gt;</td></tr>
+          <tr><td><a href="./a06-zenkaku-arrow/">a06-zenkaku-arrow</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A06株式会社</td><td>送信する + U+3000 + ＞</td></tr>
+          <tr><td><a href="./a07-nested-br/">a07-nested-br</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A07株式会社</td><td>ikon + &lt;br&gt; di tengah teks</td></tr>
+          <tr><td><a href="./a08-input-submit/">a08-input-submit</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A08株式会社</td><td>input[type=submit] value berspasi</td></tr>
+          <tr><td><a href="./a09-button-notype/">a09-button-notype</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A09株式会社</td><td>&lt;button&gt; tanpa atribut type</td></tr>
+          <tr><td><a href="./a10-spaced/">a10-spaced</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A10株式会社</td><td>NBSP di antara huruf</td></tr>
+          <tr><td><a href="./a11-input-image/">a11-input-image</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A11株式会社</td><td>input[type=image] alt=送信する</td></tr>
+          <tr><td><a href="./a12-anchor-only/">a12-anchor-only</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A12株式会社</td><td>hanya &lt;a role=button&gt;, tanpa elemen submit</td></tr>
+          <tr><td><a href="./a13-confirm-flow/">a13-confirm-flow</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A13株式会社</td><td>確認画面へ進む ＞ → halaman konfirmasi (戻る ada di DOM lebih dulu)</td></tr>
+          <tr><td><a href="./a14-multi-form/">a14-multi-form</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A14株式会社</td><td>form 検索 di header &amp; 登録する di footer</td></tr>
+          <tr><td><a href="./a15-reset-first/">a15-reset-first</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A15株式会社</td><td>reset 「送信内容をクリア」 sebelum submit 「送信」</td></tr>
+          <tr><td><a href="./a16-form-attr/">a16-form-attr</a></td><td>A · teks tombol (TLTSK-722)</td><td>CACTAS検証A16株式会社</td><td>tombol submit di luar &lt;form&gt; (atribut form=)</td></tr>
+          <tr><td><a href="./b01-hidden-duplicate/">b01-hidden-duplicate</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B01株式会社</td><td>tombol SP (display:none) muncul lebih dulu di DOM</td></tr>
+          <tr><td><a href="./b02-cookie-modal/">b02-cookie-modal</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B02株式会社</td><td>modal Cookie menutupi seluruh layar sampai 同意する</td></tr>
+          <tr><td><a href="./b03-loading-overlay/">b03-loading-overlay</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B03株式会社</td><td>overlay transparan 8 detik setelah load</td></tr>
+          <tr><td><a href="./b04-late-button/">b04-late-button</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B04株式会社</td><td>tombol baru masuk DOM 6 detik setelah load</td></tr>
+          <tr><td><a href="./b05-late-button-long/">b05-late-button-long</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B05株式会社</td><td>tombol baru masuk DOM 45 detik setelah load (kontrol gagal)</td></tr>
+          <tr><td><a href="./b06-agree-reveal/">b06-agree-reveal</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B06株式会社</td><td>tombol hidden sampai checkbox 同意 dicentang</td></tr>
+          <tr><td><a href="./b07-agree-disabled/">b07-agree-disabled</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B07株式会社</td><td>tombol disabled sampai checkbox 同意 dicentang</td></tr>
+          <tr><td><a href="./b08-label-proxy/">b08-label-proxy</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B08株式会社</td><td>input submit display:none, yang terlihat &lt;label for&gt;</td></tr>
+          <tr><td><a href="./b09-chat-bar-cover/">b09-chat-bar-cover</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B09株式会社</td><td>bar chat fixed di bawah menutupi tombol di akhir halaman</td></tr>
+          <tr><td><a href="./b10-animated-button/">b10-animated-button</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B10株式会社</td><td>tombol animasi terus-menerus (tidak pernah stable)</td></tr>
+          <tr><td><a href="./b11-shadow-dom/">b11-shadow-dom</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B11株式会社</td><td>form di dalam open shadow root</td></tr>
+          <tr><td><a href="./b12-scroll-container/">b12-scroll-container</a></td><td>B · click timeout / tidak terlihat</td><td>CACTAS検証B12株式会社</td><td>tombol di dalam container overflow:auto (kontrol lulus)</td></tr>
+          <tr><td><a href="./c01-whoami/">c01-whoami</a></td><td>C · proxy / IP (TLTSK-721)</td><td>CACTAS検証C01株式会社</td><td>menampilkan IP pengirim (cek fixed IP &amp; retry tetap lewat proxy)</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,3 @@
+name,main_company_url,inquiry_url
+CACTAS検証C02株式会社,https://opsguide-dummy-test.vercel.app:8443/cactas-submit/c01-whoami/,https://opsguide-dummy-test.vercel.app:8443/cactas-submit/c01-whoami/
+CACTAS検証C03株式会社,https://cactas-qa-no-such-host.example/contact/,https://cactas-qa-no-such-host.example/contact/
